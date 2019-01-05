@@ -10,7 +10,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/hagen1778/fasthttploader/report"
+	"github.com/tsingson/fasthttploader/report"
 	"github.com/valyala/fasthttp"
 )
 

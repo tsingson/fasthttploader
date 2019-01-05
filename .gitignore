@@ -7,4 +7,7 @@
 *.iml
 out
 gen
+.idea/
+vendor/
+
 # Created by .ignore support plugin (hsz.mobi)

@@ -8,9 +8,9 @@ import (
 	"time"
 
 	"github.com/cheggaaa/pb"
-	"github.com/hagen1778/fasthttploader/fastclient"
-	"github.com/hagen1778/fasthttploader/ratelimiter"
-	"github.com/hagen1778/fasthttploader/report"
+	"github.com/tsingson/fasthttploader/fastclient"
+	"github.com/tsingson/fasthttploader/ratelimiter"
+	"github.com/tsingson/fasthttploader/report"
 )
 
 const (
@@ -243,13 +243,13 @@ func printSummary(stage string, t time.Time) {
 
 func acquireProgressBar(t time.Duration) (*pb.ProgressBar, <-chan time.Time) {
 	pb := pb.New64(int64(t.Seconds()))
-	pb.ShowCounters = false
-	pb.ShowPercent = false
+	//pb.ShowCounters = false
+	//pb.ShowPercent = false
 	pb.Start()
 	return pb, time.Tick(time.Second)
 }
 
 func finishProgressBar(pb *pb.ProgressBar) {
-	pb.Set64(pb.Total)
+	//pb.Add64(pb.Total)
 	pb.Finish()
 }
